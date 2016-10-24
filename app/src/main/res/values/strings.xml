@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Within30</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="filter">filter</string>
+    <string name="home">Home</string>
+    <string name="open">Search</string>
+    <string name="close">filter</string>
+    <string name="category">Category</string>
+    <string name="im_looking_for">I\'m looking for</string>
+    <string name="search_for_business">Search for a Category</string>
+    <string name="current_location">Change Location</string>
+    <string name="login_to">Login To</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgotpassword">Forgot Password</string>
+    <string name="login_with">LOGIN\nWITH</string>
+    <string name="facebook">FACEBOOK</string>
+    <string name="google">GOOGLE+</string>
+    <string name="or">or</string>
+    <string name="register">Register</string>
+    <string name="user">User</string>
+    <string name="business">Business</string>
+    <string name="account_details">Account Details</string>
+    <string name="email_id">Email-ID</string>
+    <string name="your_name">Your Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="onebyfour">1/4</string>
+    <string name="twobyfour">2/4</string>
+    <string name="threebyfour">3/4</string>
+    <string name="fourbyfour">4/4</string>
+    <string name="create_account">Create Account</string>
+    <string name="company_name">Company Name </string>
+    <string name="business_type">Business Type </string>
+    <string name="phone_no">Phone No </string>
+    <string name="company_email_id">Company Email-ID</string>
+    <string name="logo">Logo</string>
+    <string name="no_item_found">No item found</string>
+    <string name="business_owner">Business Owner</string>
+    <string name="services_offered">Services Offered</string>
+    <string name="schedule_my_booking">Schedule my booking</string>
+    <string name="appointment_confirmed">Appointment Confirmed!</string>
+    <string name="done">DONE</string>
+    <string name="book">Schedule</string>
+    <string name="filter_options">Filter Options</string>
+    <string name="rating_txt">Rating</string>
+    <string name="apply">Apply</string>
+    <string name="submit">Submit</string>
+    <string name="reset">Reset</string>
+    <string name="later">Ask Me Later</string>
+    <string name="Unable_to_connect_server_please_try_again">There seems to be some data connectivity issue with your network. Please check connection and try again.</string>
+    <string name="server_error_please_try_again">There seems to be some data connectivity issue with your network.</string>
+
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">E-mail</string>
+    <string name="mobile_no">Cell #</string>
+<string name="welcome_to">WELCOME TO</string>
+    <string name="drawer_open"></string>
+    <string name="drawer_close"></string>
+
+
+</resources>

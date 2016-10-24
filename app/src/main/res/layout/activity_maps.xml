@@ -1,0 +1,229 @@
+<within30.com.bottomsheet.BottomSheetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapmainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="10dp"
+            >
+// 30 miles = 48280.3
+            //1 miles = 1609.34
+            //200 miles =
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <within30.com.lib.TypeFaceTextView
+                    android:id="@+id/tv_floating_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:background="@mipmap/icon_distance"
+                    android:text=" 60 \n MI "
+                    android:paddingRight="22dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="15dp"
+                    android:gravity="center|center_horizontal"
+                    android:layout_marginRight="-5dp"
+                    app:customTypeface="fonts/DroidSerif_Bold.ttf"
+                    />
+                <within30.com.lib.VerticalSeekBar
+                    android:id="@+id/sbfilter_distance"
+                    android:layout_width="7dp"
+                    android:layout_height="match_parent"
+                    android:max="60"
+                    android:progressDrawable="@drawable/progress_distance_filter"
+                    android:layout_toRightOf="@+id/tv_floating_distance"
+                    android:thumb="@android:color/transparent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+                <within30.com.lib.VerticalSeekBar
+                    android:id="@+id/temp_sk"
+                    android:layout_width="7dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tv_floating_distance"
+                    android:max="60"
+                    android:visibility="invisible"
+                    android:progressDrawable="@drawable/progress_distance_filter"
+                    android:thumb="@android:color/transparent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <within30.com.lib.VerticalSeekBar
+                    android:id="@+id/sbfilter_time"
+                    android:layout_width="7dp"
+                    android:layout_height="match_parent"
+                    android:progressDrawable="@drawable/progress_time_filter"
+                    android:layout_toRightOf="@+id/tv_floating_distance"
+                    android:max="50"
+                    android:thumb="@android:color/transparent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+                <within30.com.lib.TypeFaceTextView
+                    android:id="@+id/tv_floating_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:background="@mipmap/icon_slider_filter"
+                    android:text=" 60\nMin"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="13dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginLeft="-5dp"
+                    android:layout_toRightOf="@+id/temp_sk"
+                    app:customTypeface="fonts/DroidSerif_Bold.ttf"/>
+
+    <!--<TextView
+        android:id="@+id/tv_floating_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:background="@mipmap/icon_slider_filter"
+        android:text=""
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:layout_toRightOf="@+id/sbfilter_time"
+       />
+
+    <within30.com.lib.VerticalSeekBar
+            android:id="@+id/sbfilter_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:max="30"
+            android:layout_toRightOf="@+id/tv_floating_distance"
+        />-->
+
+</RelativeLayout>
+
+            </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true">
+           <!-- <LinearLayout
+                android:id="@+id/llbooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <include
+                    layout="@layout/place_details_and_booking">
+                </include>
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/llfilters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:background="@android:color/white"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="left"
+                    android:gravity="left">
+                    <within30.com.lib.TypeFaceTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check Next Slot"
+                        android:layout_margin="5dp"
+                        android:textSize="13sp"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/black"
+                        android:drawableLeft="@mipmap/icon_check_next_slot"
+                        android:gravity="left"
+                        app:customTypeface="fonts/DroidSerif.ttf"/>
+
+                    <within30.com.lib.TypeFaceTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Checked In"
+                        android:layout_margin="5dp"
+                        android:textSize="13sp"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/black"
+                        android:drawableLeft="@mipmap/icon_checkedin"
+                        android:gravity="left"
+                        app:customTypeface="fonts/DroidSerif.ttf"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="left"
+                    android:gravity="left">
+                    <within30.com.lib.TypeFaceTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Slots Available"
+                        android:layout_margin="5dp"
+                        android:textSize="13sp"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/black"
+                        android:drawableLeft="@mipmap/icon_slots_available"
+                        android:gravity="left"
+                        app:customTypeface="fonts/DroidSerif.ttf"/>
+
+                    <within30.com.lib.TypeFaceTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sponsored"
+                        android:layout_margin="5dp"
+                        android:textSize="13sp"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/black"
+                        android:drawableLeft="@mipmap/icon_sponsored"
+                        android:gravity="left"
+                        app:customTypeface="fonts/DroidSerif.ttf"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>
+</within30.com.bottomsheet.BottomSheetLayout>
